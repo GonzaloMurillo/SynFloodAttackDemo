@@ -9,11 +9,6 @@ import sys
 import random
 
 
-# Function for generating a random IP
-def randomIP():
-	ip = ".".join(map(str, (random.randint(0,255)for _ in range(4))))
-	return ip
-
 # A function to create a non privileged port	
 
 def randInt():
@@ -31,8 +26,6 @@ def SYN_Flood(dstIP,dstPort,counter):
 		w_indow = randInt()
 
 		IP_Packet = IP ()
-		# We are not using the random IP here.
-		#IP_Packet.src = randomIP()
 		IP_Packet.dst = dstIP
 				
 		TCP_Segment = TCP ()	
